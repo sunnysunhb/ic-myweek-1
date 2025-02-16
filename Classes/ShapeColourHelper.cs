@@ -5,6 +5,7 @@ namespace Week1ObjectOriented.Classes
 {
     public static class ShapeColourHelper
     {
+        private static readonly string[] colours = ["Yellow", "Red", "Blue", "Green", "Orange" ];
 
         public static Shape AddColour(Shape s)
         {
@@ -19,6 +20,13 @@ namespace Week1ObjectOriented.Classes
 
             return s;
         }
+        public static Shape RandomColour(Shape s)
+        {
+            Random random = new();
+            int randomIndex = random.Next(colours.Length);
+            s.Colour = colours[randomIndex];
 
+            return s;
+        }
     }
 }

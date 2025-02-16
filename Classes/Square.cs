@@ -3,13 +3,12 @@ using Week1ObjectOriented.Interfaces;
 
 namespace Week1ObjectOriented.Classes
 {
-    public class Square : Shape, IFaces
+    public class Square : Shape, IFaces, IShape
     {
-        private int side;
+        private double side;
 
-        public Square(int s) 
+        public Square(double s) 
         {
-            
             if (s > 10)
             {
                 throw new Exception("Cannot be greater then 10");
@@ -20,12 +19,12 @@ namespace Week1ObjectOriented.Classes
 
         public Square() { }
 
-        public void SetSide(int s)
+        public void SetSide(double s)
         {
             side = s;
         }
 
-        public override int GetArea()
+        public double GetArea()
         {
             return side * side; 
         }
