@@ -26,6 +26,16 @@ catch (Exception ex)
 }
 
 
+try
+{
+    var triangle = new Triangle(3, 4, 5);
+    Console.WriteLine("The area is " + triangle.GetArea());
+}
+catch (Exception ex)
+{
+    Console.WriteLine(ex.Message);
+}
+
 ShapeColourHelper.AddColour(circle);
 
 ShapeColourHelper.AddColour(square);
